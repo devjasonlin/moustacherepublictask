@@ -1,0 +1,93 @@
+
+body{
+    font-size: 12px;
+    font-family: 'arial', sans-serif;
+    color: #222222;
+}
+.cartContainer{
+    background-color: #F6F6F7;
+    margin: 20px auto;
+    position: relative;
+    text-align: right;
+    .cart{
+        font-size: 0.5rem;;
+        display: block;
+        color: #888888;
+        line-height: 2.5;
+        margin: 10px;
+    }
+}
+
+.productContainer{
+    img{
+        width: 100%;
+    }
+    .col-12{
+        margin: 0;
+        padding: 0;
+        padding: 20px;
+        .productDetailContainer{
+            div{
+                padding: 0 20px;;
+            }
+            .producTitile{
+                font-size: 1.5rem;
+                padding: 15px 0;
+            }
+            .productPrice{
+                font-size: 1.1rem;
+                font-weight: bold;
+                padding:10px 0;
+            }
+            .productDes{
+                color: #888888;
+                padding: 20px 0;
+                line-height: 1.4rem;
+            }
+            .sizeContainer{
+                text-transform: uppercase;
+                font-weight: bold;
+                color: #888888;
+                padding-left: 0;
+                .requiredStar{
+                    color: #C90000;
+                }
+                .selectedSize{
+                    color: #222222;
+                }
+            }
+            .optionsContainer{
+                padding-left: 0;
+                padding-bottom: 20px;
+                a{
+                    color: #888888;
+                    text-decoration: none;
+                    display: inline-block;
+                    border:1px solid #CCCCCC;
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    margin-right: 5px;
+                }
+            }
+            .btnAdd{
+                text-decoration: none;
+                display: block;
+                width: 170px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                font-size: 1rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                color: #222222;
+                border: 2px solid #222222;
+                &:hover{
+                    background-color: #222222;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
