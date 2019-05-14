@@ -5,19 +5,113 @@ body{
     color: #222222;
 }
 .cartContainer{
+    height: 40px;
     background-color: #F6F6F7;
     margin: 20px auto;
     position: relative;
     text-align: right;
+    padding: 0;
+    position: relative;
     .cart{
+        border: none;
+        background-color: transparent;
+        height: 35px;
+        text-decoration: none;
         font-size: 0.5rem;;
-        display: block;
+        display: inline-block;
+        margin: 0;
         color: #888888;
         line-height: 2.5;
-        margin: 10px;
+        margin-right: 10px;
+        &:hover{
+            color: #222222;
+        }
+        img{
+            width: 15px;
+        }
+    }
+    .miniCartContianer{
+        // display: none;
+        display: block;
+        transition: display 0.2s,;
+        -webkit-transition: display 0.2s;
+        .arrowPoint{
+            position: absolute;
+            right: 35px;
+            top: 35px;
+            width: 20px;
+        }
+        .btnClose{
+            width: 10px;
+            cursor: pointer;
+        }
+        .miniCart{
+            background-color: rgb(246,246,247);
+            margin: 0;
+            position: absolute;
+            right: 5px;
+            top: 50px;
+            width: 100%;
+            max-width: 450px;
+            z-index: 999999;
+            box-shadow: 5px 5px 5px #222222;
+            padding: 25px 50px;
+            border-radius: 5px;
+            .displayNone{
+                display: none;
+            }
+            .cartItemContainer{
+                
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+                border-bottom: 1px solid #CCCCCC !important;
+            }
+            .row{
+                text-align: left;
+                .cartImageContainer{
+                    text-align: center;
+                }
+                .cartImage{
+                    width: 100%;
+                    display: block;
+                }
+                .cartTitle{
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    margin: 0 0 10px 0;
+                }
+                .cartCalculationContainer{
+                    margin-top: 30px !important;
+                    padding-bottom: 0 !important;
+                    .cartNumberContainer{
+                        border-bottom: 1px solid #CCCCCC;
+                        .cartNumber{
+                            margin-bottom: 10px !important; 
+                        }
+                    }
+                }
+                .cartTotalContainer{
+                    margin-top: 10px;
+                }
+                .cartPrice{
+                    padding: 0;
+                    margin: 0;
+
+                }
+                .col-12{
+                    padding: 0;
+                    margin: 0;
+                }
+                
+            }
+        }
+    }
+    .displayNone{
+        display: none;
+        transition: display 0.2s;
+        -webkit-transition: display 0.2s;
     }
 }
-
 .productContainer{
     img{
         width: 100%;
@@ -60,6 +154,7 @@ body{
                 padding-left: 0;
                 padding-bottom: 20px;
                 a{
+                    cursor: pointer;
                     color: #888888;
                     text-decoration: none;
                     display: inline-block;
@@ -70,24 +165,37 @@ body{
                     text-align: center;
                     margin-right: 5px;
                 }
-            }
-            .btnAdd{
-                text-decoration: none;
-                display: block;
-                width: 170px;
-                height: 40px;
-                line-height: 40px;
-                text-align: center;
-                font-size: 1rem;
-                font-weight: bold;
-                text-transform: uppercase;
-                color: #222222;
-                border: 2px solid #222222;
-                &:hover{
-                    background-color: #222222;
-                    color: #fff;
+                .optionSelected{
+                    border:2px solid #222222;
+                }
+                .sizeNotice{
+                    display: inline-block;
+                    padding-top: 5px;
+                    color: #C90000;
+                }
+                .sizeNoticeDisplay{
+                    display: none;
                 }
             }
         }
+    }
+}
+.btnAdd{
+    text-decoration: none;
+    display: block;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #222222;
+    border: 2px solid #222222;
+    transition: background-color 0.2s, color 0.2s;
+    -webkit-transition: background-color 0.2s, color 0.2s;
+    &:hover{
+        background-color: #222222;
+        color: #fff;
     }
 }

@@ -16,8 +16,114 @@
 
 <body>
     <!-- Cart Section Begin -->
-    <div class="container cartContainer">
-        <a href="#" class="cart">My Cart<span>( 4 )</span></a>
+    <div class="nav container cartContainer justify-content-end">
+        <li class="nav-item">
+            <button id="btnMyCartOne" href="#" class="d-block d-md-none cart"><img src="images/cart.png" alt=""> <span>( 0 )</span></button>
+            <button id="btnMyCartTwo" href="#" class="nav-link d-none d-md-block cart">My Cart <span>( 0 )</span></button>
+        </li>
+        <div class="miniCartContianer displayNone">
+            <img class="arrowPoint" src="images/arrow-point.png" alt="">
+            
+            <div class="miniCart">
+                <img id="btnClose" class="btnClose" src="images/close.png" alt="">
+                <!-- Small-size Item Added Into Cart Begin -->
+                <div class="row cartItemContainer displayNone" id="smallItem">
+                    <div class="col-3 cartImageContainer container">
+                        <img class="cartImage" src="images/classic-tee.jpg" alt="">
+                    </div>
+                    <div class="col-4 container">
+                        <p class="cartTitle">Classic Tee</p>
+                        <p class="cartSize">Size: <span>Small</span></p>
+                    </div>
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-12 cartCalculationContainer">
+                                <div class="row">
+                                    <div class="col-6"><p class="cartPrice">Price:</p></div>
+                                    <div class="col-6"><span>$75.00</span></div>
+                                </div>
+                                <div class="row cartNumberContainer">
+                                    <div class="col-6"><p class="cartNumber">Quantity:</p></div>
+                                    <div class="col-6"><span id="smallNumber">1</span></div>
+                                </div>
+                                <div class="row justify-content-end cartTotalContainer">
+                                    <div class="col-6">$<span id="smallTotal">75.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Small-size Item Added Into Cart End -->
+                <!-- Medium-size Item Added Into Cart Begin -->
+                <div class="row cartItemContainer displayNone" id="mediumItem">
+                        <div class="col-3 cartImageContainer container">
+                            <img class="cartImage" src="images/classic-tee.jpg" alt="">
+                        </div>
+                        <div class="col-4 container">
+                            <p class="cartTitle">Classic Tee</p>
+                            <p class="cartSize">Size: <span>Medium</span></p>
+                        </div>
+                        <div class="col-5">
+                            <div class="row">
+                                <div class="col-12 cartCalculationContainer">
+                                    <div class="row">
+                                        <div class="col-6"><p class="cartPrice">Price:</p></div>
+                                        <div class="col-6"><span>$75.00</span></div>
+                                    </div>
+                                    <div class="row cartNumberContainer">
+                                        <div class="col-6"><p class="cartNumber">Quantity:</p></div>
+                                        <div class="col-6"><span id="mediumNumber">1</span></div>
+                                    </div>
+                                    <div class="row justify-content-end cartTotalContainer">
+                                        <div class="col-6">$<span id="mediumTotal">75.00</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <!-- Medium-size Item Added Into Cart End -->
+                <!-- Large-size Item Added Into Cart Begin -->
+                <div class="row cartItemContainer displayNone" id="largeItem">
+                    <div class="col-3 cartImageContainer container">
+                        <img class="cartImage" src="images/classic-tee.jpg" alt="">
+                    </div>
+                    <div class="col-4 container">
+                        <p class="cartTitle">Classic Tee</p>
+                        <p class="cartSize">Size: <span>Large</span></p>
+                    </div>
+                    <div class="col-5">
+                        <div class="row">
+                            <div class="col-12 cartCalculationContainer">
+                                <div class="row">
+                                    <div class="col-6"><p class="cartPrice">Price:</p></div>
+                                    <div class="col-6"><span>$75.00</span></div>
+                                </div>
+                                <div class="row cartNumberContainer">
+                                    <div class="col-6"><p class="cartNumber">Quantity:</p></div>
+                                    <div class="col-6"><span id="largeNumber">1</span></div>
+                                </div>
+                                <div class="row justify-content-end cartTotalContainer">
+                                    <div class="col-6">$<span id="largeTotal">75.00</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Large-size Item Added Into Cart End -->
+                <!-- Checkout button & SubTotal Price begin -->
+                <div class="row">
+                    <div class="col-7">
+                        <button class="btnAdd">Checkout</button>
+                    </div>
+                    <div class="col-5">
+                        <div class="row justify-content-end">
+                            <div class="col-6">Subtotal:</div>
+                            <div class="col-6">$<span id="subTotal">00.00</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Cart Section End -->
     <!-- Product Section Begin -->
@@ -54,22 +160,23 @@
                     <!-- Product Size Display Begin -->
                     <div class="col-12">
                         <div class="sizeContainer">
-                            <p>size<span class="requiredStar">* </span><span class="selectedSize">s</span></p>
+                            <p>size<span class="requiredStar">* </span><span class="selectedSize"></span></p>
                         </div>
                     </div>
                     <!-- Product Size Display End -->
                     <!-- Product Size Options Begin -->
                     <div class="col-12">
                         <div class="optionsContainer">
-                            <a href="#">S</a>
-                            <a href="#">M</a>
-                            <a href="#">L</a>
+                            <a id="optionS" >S</a>
+                            <a id="optionM" >M</a>
+                            <a id="optionL" >L</a>
+                            <p class="sizeNotice sizeNoticeDisplay"> * Please select a size</p>
                         </div>
                     </div>
                     <!-- Product Size Options End -->
                     <!-- Add To Cart Begin -->
                     <div class="col-12">
-                        <a href="#" class="btnAdd">Add to cart</a>
+                        <button id="btnAdd" href="#" class="btnAdd">Add to cart</button>
                     </div>
                     <!-- Add To Cart End -->
                 </div>
@@ -89,6 +196,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script/script.js"></script>
 </body>
 
 </html>
